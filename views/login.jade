@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h3 Please Login
+    .row.container
+        .col-md-4.col-md-offset-4(style='padding-top:25px;')
+            h1(style='font-size:50px;') Sign In
+            form(method='post', action='/users/login')
+                .form-group
+                    label(for='username') Username:
+                    input#username.form-control(type='text', name='username', placeholder='enter username', required)
+                .form-group
+                    label(for='password') Password:
+                    input#password.form-control(type='password', name='password', placeholder='password', required)
+                button#submit.btn.btn-primary(type='submit') Sign in
+                br
+                br
+            a(href='/users/register') not a memeber Register here
